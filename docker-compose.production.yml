@@ -28,7 +28,7 @@ services:
     image: vladimirazanza/kittygram_gateway
     env_file: .env
     ports:
-      - 8080:80
+      - 9000:80
     volumes:
       - static:/static
-      - media_volume:/media
+      - media_volume:/app/media
