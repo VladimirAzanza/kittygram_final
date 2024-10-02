@@ -17,11 +17,11 @@ services:
     env_file: .env
     volumes:
       - static_volume:/backend_static
-      - media_volume:/app/kittygram/media
+      - media_volume:/app/media
   frontend:
     env_file: .env
     image: vladimirazanza/kittygram_frontend
-    command: cp -r /app/kittygram/build/. /static/
+    command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
